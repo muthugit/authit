@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from authr.entities.permission import Permission
+from authro.entities.permission import Permission
 
 
 @dataclass

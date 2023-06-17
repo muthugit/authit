@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from authr.entities.role import Role
+from authro.entities.role import Role
 
 
 @dataclass
