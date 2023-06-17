@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
    name='authro',
-   version='1.0',
+   version='0.0.1',
    description='An identity platform',
    author='Muthu',
    author_email='contact@muthupandian.in',
