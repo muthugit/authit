@@ -9,6 +9,6 @@ R = TypeVar("R")
 class StorageInterface(ABC):
     
     @abstractmethod
-    def create(self, obj: T) -> R:
+    def create(self, tbl: str, obj: T) -> R:
         ...
     
