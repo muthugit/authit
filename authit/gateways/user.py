@@ -1,5 +1,5 @@
-from authro.usecases.createUser import CreateUserUseCase, CreateUserRequest, CreateUserResponse
-from authro.entities.user import User, Role
+from authit.usecases.createUser import CreateUserUseCase, CreateUserRequest, CreateUserResponse
+from authit.entities.user import User, Role
 
 class UserGateway:
     def __init__(self) -> None:

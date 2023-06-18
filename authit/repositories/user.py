@@ -1,4 +1,4 @@
-from authro.entities.user import User
+from authit.entities.user import User
 from .base import BaseRepository
 
 

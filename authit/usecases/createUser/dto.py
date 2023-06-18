@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from authro.entities.user import User
+from authit.entities.user import User
 
 
 @dataclass

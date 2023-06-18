@@ -1,6 +1,6 @@
 from .dto import CreateUserRequest, CreateUserResponse
-from authro.usecases.iUseCase import IUseCase
-from authro.repositories.user import UserRepository
+from authit.usecases.iUseCase import IUseCase
+from authit.repositories.user import UserRepository
 
 
 class CreateUserUseCase(IUseCase):
