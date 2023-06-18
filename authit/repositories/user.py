@@ -1,10 +1,11 @@
 from authit.entities.user import User
+from authit.entities.config import Config
 from .base import BaseRepository
 
 
 class UserRepository(BaseRepository):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, config: Config):
+        super().__init__(config=config)
 
 
     def createUser(self, user: User):

@@ -1,9 +1,10 @@
 from authit.usecases.user.createUser import CreateUserUseCase, CreateUserRequest, CreateUserResponse
 from authit.usecases.user.loadUser import LoadUserRequest, LoadUserUseCase
 from authit.entities.user import User, Role
+from .base import BaseGateway
 
 
-class UserGateway:
+class UserGateway(BaseGateway):
     def __init__(self) -> None:
         pass
 
@@ -21,7 +22,7 @@ class UserGateway:
             )
         )
         dto = CreateUserRequest(user=user)
-        useCase = CreateUserUseCase(dto)
+        useCase = CreateUserUseCase(dto, config=self.config)
         return useCase.execute()
     
     def selectUser(
@@ -31,5 +32,5 @@ class UserGateway:
         dto = LoadUserRequest(
             userName=userName
         )
-        useCase = LoadUserUseCase(dto)
+        useCase = LoadUserUseCase(dto, config=self.config)
         return useCase.execute().user
