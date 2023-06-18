@@ -11,7 +11,7 @@ class UserGateway:
         self,
         userName: str,
         passwordHash: str,
-        userRole: str = None
+        userRole: str | None = None
     ) -> User:
         user = User(
             userName=userName,
