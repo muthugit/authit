@@ -8,5 +8,8 @@ class UserRepository(BaseRepository):
 
 
     def createUser(self, user: User):
-        self.provider.create("user", user.userName)
+        self.provider.create("user", user)
         print("User created")
+
+    def selectUser(self, userName: str) -> User:
+        return self.provider.select("user", userName)
