@@ -1,11 +1,13 @@
 from setuptools import setup
 
 setup(
-   name='authit',
-   version='0.0.2',
-   description='An identity platform',
-   author='Muthu',
-   author_email='contact@muthupandian.in',
-   packages=['authit'],  #same as name
-   install_requires=[], #external packages as dependencies
+    name='authit',
+    version='0.0.3',
+    description='An identity platform',
+    author='Muthu',
+    author_email='contact@muthupandian.in',
+    packages=['authit'],
+    install_requires=[
+        "bcrypt"
+    ],
 )
