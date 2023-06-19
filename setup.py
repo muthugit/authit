@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='authit',
-    version='0.0.5',
+    version='0.0.6',
     description='An identity platform',
     author='Muthu',
     author_email='contact@muthupandian.in',
