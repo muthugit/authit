@@ -1,9 +1,10 @@
 name: Publish to PyPI.org
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
 jobs:
-  pypi:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,8 +17,3 @@ jobs:
         run: |
           python3 -m pip install requirements.txt
           pytest tests/
-
-      - name: Publish package
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
