@@ -1,4 +1,4 @@
-name: Publish to PyPI.org
+name: CI
 on:
   push:
     branches:
