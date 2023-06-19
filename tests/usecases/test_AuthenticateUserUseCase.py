@@ -1,3 +1,4 @@
+"""Authenticate user"""
 import os
 import unittest
 from uuid import uuid4
@@ -12,6 +13,7 @@ from authit.usecases.user.authenticateUser import (
 
 
 class TestAuthenticateUserUseCase(unittest.TestCase):
+    """Authentication"""
 
     def setUp(self) -> None:
         self.userName = "dummy"
@@ -19,7 +21,8 @@ class TestAuthenticateUserUseCase(unittest.TestCase):
             storageEngine="fileSystem"
         )
 
-    def test01_CreateValidUser(self):
+    def test01CreateValidUser(self):
+        """Create valid user"""
         # Arrange
         if os.path.exists(f"/tmp/user/{self.userName}.ait"):
             os.remove(f"/tmp/user/{self.userName}.ait")
@@ -42,7 +45,8 @@ class TestAuthenticateUserUseCase(unittest.TestCase):
         # Assert
         self.assertEqual(True, os.path.exists(f"/tmp/user/{userName}.ait"))
 
-    def test02_Authenticate(self):
+    def test02Authenticate(self):
+        """Authenticate created user"""
         # Arrange
         dto = AuthenticateUserRequest(
             self.userName,

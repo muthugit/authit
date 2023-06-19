@@ -9,7 +9,10 @@ from authit.usecases.user.createUser import (CreateUserRequest,
 
 
 class TestCreateUserUseCase(unittest.TestCase):
+    """Create user"""
+
     def test01CreateValidUser(self):
+        """Create valid user"""
         # Arrange
         userName = str(uuid4())
         user = User(
