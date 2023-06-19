@@ -1,6 +1,7 @@
-from .user import UserGateway
-from .role import RoleGateway
 from authit.entities.config import Config
+
+from .role import RoleGateway
+from .user import UserGateway
 
 
 class ConnectionGateway(UserGateway, RoleGateway):

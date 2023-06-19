@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from authit.entities.user import User
 
 
@@ -6,9 +7,10 @@ from authit.entities.user import User
 class LoadUserRequest:
     userName: str
 
+
 @dataclass
 class LoadUserResponse:
-    user: User    
+    user: User
 
     def __post_init__(self):
         self.user.hashKey = "***"

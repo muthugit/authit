@@ -1,7 +1,8 @@
-from .dto import LoadUserRequest, LoadUserResponse
 from authit.entities.config import Config
-from authit.usecases.iUseCase import IUseCase
 from authit.repositories.user import UserRepository
+from authit.usecases.iUseCase import IUseCase
+
+from .dto import LoadUserRequest, LoadUserResponse
 
 
 class LoadUserUseCase(IUseCase):

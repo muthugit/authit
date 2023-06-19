@@ -1,5 +1,5 @@
-from authit.entities.user import User
 from authit.entities.config import Config
+from authit.entities.user import User
 from authit.providers.storage.fileSystem import FileSystemStorage
 
 
@@ -9,5 +9,3 @@ class BaseRepository:
             self.provider = FileSystemStorage("fi")
         else:
             raise Exception("Invalid storage engine")
-
-    

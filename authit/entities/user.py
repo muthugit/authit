@@ -1,8 +1,11 @@
-from typing import Optional
 from dataclasses import dataclass
-from authit.entities.role import Role
-from .base import BaseEntity
+from typing import Optional
+
 import bcrypt
+
+from authit.entities.role import Role
+
+from .base import BaseEntity
 
 
 @dataclass

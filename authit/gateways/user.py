@@ -1,7 +1,11 @@
-from authit.usecases.user.createUser import CreateUserUseCase, CreateUserRequest, CreateUserResponse
+from authit.entities.user import Role, User
+from authit.usecases.user.authenticateUser import (AuthenticateUserRequest,
+                                                   AuthenticateUserUseCase)
+from authit.usecases.user.createUser import (CreateUserRequest,
+                                             CreateUserResponse,
+                                             CreateUserUseCase)
 from authit.usecases.user.loadUser import LoadUserRequest, LoadUserUseCase
-from authit.usecases.user.authenticateUser import AuthenticateUserRequest, AuthenticateUserUseCase
-from authit.entities.user import User, Role
+
 from .base import BaseGateway
 
 

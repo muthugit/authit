@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from authit.entities.user import User
 
 
@@ -7,9 +8,10 @@ class AuthenticateUserRequest:
     userName: str
     password: str
 
+
 @dataclass
 class AuthenticateUserResponse:
-    user: User    
+    user: User
 
     def __post_init__(self):
         self.user.hashKey = "***"
