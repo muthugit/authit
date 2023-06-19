@@ -1,5 +1,6 @@
 from authit.usecases.user.createUser import CreateUserUseCase, CreateUserRequest, CreateUserResponse
 from authit.usecases.user.loadUser import LoadUserRequest, LoadUserUseCase
+from authit.usecases.user.authenticateUser import AuthenticateUserRequest, AuthenticateUserUseCase
 from authit.entities.user import User, Role
 from .base import BaseGateway
 
@@ -11,12 +12,12 @@ class UserGateway(BaseGateway):
     def createUser(
         self,
         userName: str,
-        passwordHash: str,
+        password: str,
         userRole: str | None = None
     ) -> User:
         user = User(
             userName=userName,
-            passwordHash=passwordHash,
+            password=password,
             userRole=Role(
                 userRole
             )
@@ -33,4 +34,18 @@ class UserGateway(BaseGateway):
             userName=userName
         )
         useCase = LoadUserUseCase(dto, config=self.config)
+        return useCase.execute().user
+    
+    def authenticate(
+            self,
+            userName: str,
+            password: str
+    ):
+        dto = AuthenticateUserRequest(
+            userName=userName,
+            password=password
+        )
+        useCase = AuthenticateUserUseCase(
+            dto, config=self.config
+        )
         return useCase.execute().user

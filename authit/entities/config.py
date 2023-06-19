@@ -3,4 +3,4 @@ from dataclasses import dataclass
 
 @dataclass
 class Config:
-    storageEngine: str = "fileSystem"
+    storageEngine: str
