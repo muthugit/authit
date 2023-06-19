@@ -10,3 +10,7 @@ class AuthenticateUserRequest:
 @dataclass
 class AuthenticateUserResponse:
     user: User    
+
+    def __post_init__(self):
+        self.user.hashKey = "***"
+        self.user.passwordHash = "***"

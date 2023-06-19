@@ -9,3 +9,7 @@ class LoadUserRequest:
 @dataclass
 class LoadUserResponse:
     user: User    
+
+    def __post_init__(self):
+        self.user.hashKey = "***"
+        self.user.passwordHash = "***"

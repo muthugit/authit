@@ -9,3 +9,7 @@ class CreateUserRequest:
 @dataclass
 class CreateUserResponse:
     user: User    
+
+    def __post_init__(self):
+        self.user.hashKey = "***"
+        self.user.passwordHash = "***"

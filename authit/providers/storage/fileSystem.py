@@ -3,6 +3,7 @@ from uuid import uuid4
 from .interface import StorageInterface
 from authit.entities.base import BaseEntity
 import pickle
+from authit.providers.errors import AuthenticationException
 
 
 class FileSystemStorage(StorageInterface):
@@ -22,5 +23,7 @@ class FileSystemStorage(StorageInterface):
     def select(self, tbl: str, key: str):
         directory = os.path.join("/tmp", tbl)
         filePath = os.path.join(directory, f"{key}.pkl")
+        if not os.path.exists(filePath):
+            raise AuthenticationException("Invalid username.")
         with open(filePath, 'rb') as file:
             return pickle.load(file=file)

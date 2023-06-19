@@ -2,6 +2,7 @@ from .dto import AuthenticateUserRequest, AuthenticateUserResponse
 from authit.entities.config import Config
 from authit.usecases.iUseCase import IUseCase
 from authit.repositories.user import UserRepository
+from authit.providers.errors import AuthenticationException
 import bcrypt 
 
 class AuthenticateUserUseCase(IUseCase):
@@ -17,4 +18,4 @@ class AuthenticateUserUseCase(IUseCase):
             res = AuthenticateUserResponse(user=user)
             return res
         else:
-            raise Exception("Authentication failed")
+            raise AuthenticationException("Invalid username or password")
