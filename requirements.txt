@@ -6,7 +6,7 @@ arrow==1.2.3
 asttokens==2.2.1
 async-lru==2.0.2
 attrs==23.1.0
--e git+https://github.com/muthugit/authr.git@eb3115c9688f3c45f2289149c73320d24e724b6c#egg=authr
+# -e git+https://github.com/muthugit/authr.git@eb3115c9688f3c45f2289149c73320d24e724b6c#egg=authr
 Babel==2.12.1
 backcall==0.2.0
 bcrypt==4.0.1
