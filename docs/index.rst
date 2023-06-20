@@ -8,7 +8,7 @@ Installation
 
 Install directly from PIP registry
 
-.. code-block:
+.. code-block::
     
     pip install authit
 
@@ -18,7 +18,7 @@ Usage
 
 Import package and initialize
 
-.. code-block: python
+.. code-block:: python
 
     import authit
     auth = authit.connect()
@@ -26,7 +26,7 @@ Import package and initialize
 
 To create user
 
-.. code-block: python
+.. code-block:: python
     
     auth.createUser(
         userName="user",
