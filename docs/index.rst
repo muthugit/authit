@@ -36,8 +36,9 @@ To create user
 
 To authenticate user
 
-```python
-validUser = auth.authenticate(
-    userName="user",
-    password="password"
-)
+.. code-block:: python
+    
+    validUser = auth.authenticate(
+        userName="user",
+        password="password"
+    )
