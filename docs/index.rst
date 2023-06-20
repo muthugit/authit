@@ -1,32 +1,38 @@
-# authit
+authit
+======
 
 `authit` is the simple and light weight *Identity platform*
 
-## Installation
+Installation
+--------------
 
 Install directly from PIP registry
 
-```
-pip install authit
-```
+.. code-block:
+    
+    pip install authit
 
-## Usage
+
+Usage
+-------
 
 Import package and initialize
 
-```python
-import authit
-auth = authit.connect()
-```
+.. code-block: python
+
+    import authit
+    auth = authit.connect()
+
 
 To create user
 
-```python
-auth.createUser(
-    userName="user",
-    password="password"
-)
-```
+.. code-block: python
+    
+    auth.createUser(
+        userName="user",
+        password="password"
+    )
+
 
 To authenticate user
 
